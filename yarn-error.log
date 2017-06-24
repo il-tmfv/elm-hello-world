@@ -1,0 +1,43 @@
+Arguments: 
+  /Users/ilyatimofeev/.nvm/versions/node/v7.0.0/bin/node /Users/ilyatimofeev/.nvm/versions/node/v7.0.0/bin/yarn
+
+PATH: 
+  /Users/ilyatimofeev/.rvm/gems/ruby-2.3.1/bin:/Users/ilyatimofeev/.rvm/gems/ruby-2.3.1@global/bin:/Users/ilyatimofeev/.rvm/rubies/ruby-2.3.1/bin:/Users/ilyatimofeev/.nvm/versions/node/v7.0.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/ilyatimofeev/.rvm/bin:/Users/ilyatimofeev/Library/Android/sdk/tools:/Users/ilyatimofeev/Library/Android/sdk/platform-tools
+
+Yarn version: 
+  0.22.0
+
+Node version: 
+  7.0.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "elm-hello-world",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/il-tmfv/elm-hello-world.git",
+    "author": "Ilya Timofeev <il.tmfv@gmail.com>",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: ENOENT: no such file or directory, open '/Users/ilyatimofeev/.config/yarn/global/node_modules/inquirer/node_modules/mute-stream/mute.js'
+      at Object.fs.openSync (fs.js:557:18)
+      at Object.fs.readFileSync (fs.js:467:33)
+      at Object.Module._extensions..js (module.js:581:20)
+      at Module.load (module.js:490:32)
+      at tryModuleLoad (module.js:449:12)
+      at Function.Module._load (module.js:441:3)
+      at Module.require (module.js:500:17)
+      at require (/Users/ilyatimofeev/.config/yarn/global/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+      at Object.<anonymous> (/Users/ilyatimofeev/.config/yarn/global/node_modules/inquirer/lib/ui/baseUI.js:3:18)
+      at Module._compile (/Users/ilyatimofeev/.config/yarn/global/node_modules/v8-compile-cache/v8-compile-cache.js:178:30)
