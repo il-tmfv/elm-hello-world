@@ -1,27 +1,30 @@
 var path = require('path');
+
 module.exports = {
   entry: {
     app: ['./src/index.js'],
   },
+
   output: {
     path: path.resolve(__dirname + '/dist'),
     filename: '[name].js',
   },
+
   module: {
-    rules: [
+    loaders: [
       {
         test: /\.(css|scss)$/,
-        use: ['style-loader', 'css-loader'],
+        loaders: ['style-loader', 'css-loader'],
       },
       {
         test: /\.html$/,
         exclude: /node_modules/,
-        loader: 'file-loader?name=[name].[ext]',
+        loader: 'file?name=[name].[ext]',
       },
       {
         test: /\.elm$/,
         exclude: [/elm-stuff/, /node_modules/],
-        loader: 'elm-webpack-loader?verbose=true&warn=true',
+        loader: 'elm-webpack?verbose=true&warn=true',
       },
       {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
@@ -32,8 +35,10 @@ module.exports = {
         loader: 'file-loader',
       },
     ],
+
     noParse: /\.elm$/,
   },
+
   devServer: {
     inline: true,
     stats: { colors: true },

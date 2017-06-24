@@ -5,10 +5,17 @@
   "repository": "https://github.com/il-tmfv/elm-hello-world.git",
   "author": "Ilya Timofeev <il.tmfv@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "api": "node api.js",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "dev": "webpack-dev-server --port 3000 --config webpack.config.js",
+    "start": "concurrently --kill-others \"npm run dev\" \"npm run api\""
+  },
   "dependencies": {
     "ace-css": "1.1",
     "css-loader": "^0.28.4",
-    "elm-webpack-loader": "4.1.0",
+    "elm-webpack-loader": "4.1.1",
     "file-loader": "^0.11.2",
     "font-awesome": "4",
     "json-server": "0.9.5",
@@ -17,5 +24,8 @@
     "webpack": "1.13",
     "webpack-dev-middleware": "^1.11.0",
     "webpack-dev-server": "1"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0"
   }
 }
