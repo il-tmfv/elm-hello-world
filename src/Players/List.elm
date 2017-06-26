@@ -9,9 +9,10 @@ import RemoteData exposing (WebData)
 
 view : WebData (List Player) -> Html Msg
 view response =
- div []
- [ nav
- , maybeList response ]
+    div []
+        [ nav
+        , maybeList response
+        ]
 
 
 nav : Html Msg
@@ -22,15 +23,19 @@ nav =
 
 maybeList : WebData (List Player) -> Html Msg
 maybeList response =
- case response of
-  RemoteData.NotAsked ->
-   text ""
-  RemoteData.Loading ->
-   text "Loading..."
-  RemoteData.Success players ->
-   list players
-  RemoteData.Failure error ->
-   text (toString error)
+    case response of
+        RemoteData.NotAsked ->
+            text ""
+
+        RemoteData.Loading ->
+            text "Loading..."
+
+        RemoteData.Success players ->
+            list players
+
+        RemoteData.Failure error ->
+            text (toString error)
+
 
 list : List Player -> Html Msg
 list players =
